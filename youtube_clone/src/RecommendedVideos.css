@@ -10,3 +10,11 @@
     margin-bottom: 20px;
 }
 
+.recommendedVideos__videos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.videoCard__info {
+    display: flex;
+}
