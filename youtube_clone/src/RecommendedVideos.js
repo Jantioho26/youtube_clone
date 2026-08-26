@@ -27,7 +27,7 @@ function RecommendedVideos() {
       <h2>Recommended</h2>
       <div className="recommendedVideos__videos">
         <VideoCard 
-           title="USWNT Mic'd Up | Trinity Rodman"
+           title="USWNT Mic'd Up | Trinity"
            views="444K views"
            timestamp="8 days ago"
            channelImage={channelLogo}

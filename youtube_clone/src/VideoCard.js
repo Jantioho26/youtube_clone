@@ -8,7 +8,7 @@ function VideoCard({ image, title, channel, views, timestamp, channelImage }) {
   return (
     <div className="videoCard">
      <img className="videoCard__thumbnail" src={image} alt=""/>
-     <div className="videoCard__info"></div>
+     <div className="videoCard__info">
      <Avatar
      className="videoCard__avatar" 
      alt={channel} 
@@ -21,6 +21,7 @@ function VideoCard({ image, title, channel, views, timestamp, channelImage }) {
             {views} . {timestamp}
         </p>
      </div>
+    </div>
     </div>
   );
 }
