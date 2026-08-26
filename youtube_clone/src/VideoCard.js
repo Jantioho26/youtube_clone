@@ -1,5 +1,5 @@
 import React from 'react'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Avatar from '@mui/material/Avatar';
 import "./VideoCard.css";
 
 
@@ -9,7 +9,7 @@ function VideoCard({ image, title, channel, views, timestamp, channelImage }) {
     <div className="videoCard">
      <img className="videoCard__thumbnail" src={image} alt=""/>
      <div className="videoCard__info"></div>
-     <AccountCircleIcon 
+     <Avatar
      className="videoCard__avatar" 
      alt={channel} 
      src={channelImage} 
