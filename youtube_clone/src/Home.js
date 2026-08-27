@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Sidebar from "./Sidebar";
+import RecommendedVideos from "./RecommendedVideos";
 
-const Home () => {
+const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="app__page">
+     <Sidebar />
+     <RecommendedVideos /> 
     </div>
-  )
-}
+  );
+};
 
 export default Home
 
