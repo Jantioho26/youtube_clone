@@ -3,29 +3,31 @@ import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import RecommendedVideos from "./RecommendedVideos";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./Home";
+import "./Search";
 
 function App() {
   return (
     <div className="app">
       <Router>
-        <Routes>
-          <Route path="/search">
-            <h1>Search Page</h1>
-          </Route>
-          <Route path="/">
-            <h1>Home Page</h1>
-          </Route>
-        </Routes>
-      </Router>
+        <nav>
+        <Link to=“/“>Home</Link>
+       <Link to="/search”>Search</Link>
+      </nav>
+      <Routes>
+      <Route path="/" element={Home />} />
+      <Route path="/search" element={Search />} />
+       </Router>
 
       {/* <Header />
       <div className="app__page">
         <Sidebar />
-        <RecommendedVideos /> */}
-      {/* </div> */}
-    </div>
+        <RecommendedVideos /> 
+      </div> */}
+    </div> 
   );
 }
 
 export default App;
+
