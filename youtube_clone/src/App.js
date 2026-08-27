@@ -19,14 +19,13 @@ function App() {
          </Routes>
       </Router>
       <div className="app__page">
-     <Sidebar />
-      <SearchPage />
       </div>
+      <Sidebar />
+      <SearchPage />
     </div>
 
    
-    //   <Sidebar />
-    //  <SearchPage />
+ 
 
      
   
