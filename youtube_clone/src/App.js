@@ -20,8 +20,7 @@ function App() {
       </Router>
       <div className="app__page">
       </div>
-      <Sidebar />
-      <SearchPage />
+        <SearchPage />
     </div>
 
    

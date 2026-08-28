@@ -11,7 +11,6 @@ function SearchPage() {
         <h2>Filter</h2>
         </div>
         <Sidebar />
-       <SearchPage />
     </div>
   );
 }
