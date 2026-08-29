@@ -12,7 +12,7 @@ function App() {
       <div className="app">
       <Router>
           <Header />
-
+         
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search/:searchTerm" element={<Search />}  />
@@ -20,7 +20,6 @@ function App() {
       </Router>
       <div className="app__page">
       </div>
-        <SearchPage />
     </div>
 
    
