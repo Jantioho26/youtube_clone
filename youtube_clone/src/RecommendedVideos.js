@@ -5,7 +5,7 @@ import trinityThumbnail from "./assets/Images/Trin.webp";
 import channelLogo from './assets/Images/Uswnt_logo.jpg';
 import mewisThumbnail from './assets/Images/Mewniverse_Icon.webp';
 import twgLogo from './assets/Images/tgw_logo.webp';
-import UswntvsBrazil from './assets/Images/USWNT vs Brazil.jpg';
+import USWNTvsBrazil from './assets/Images/USWNTvsBrazil.jpeg';
 import Uswnt_logo from './assets/Images/Uswnt_logo.jpg';
 import scenicHuntersLogo from './assets/Images/scenic_Hunters_logo.jpeg';
 import travel_plane from './assets/Images/travel_plane_corona.webp';
@@ -48,7 +48,7 @@ function RecommendedVideos() {
            timestamp="2 Months ago"
            channelImage={Uswnt_logo}
            channel="USWNT"
-           image={UswntvsBrazil}
+           image={USWNTvsBrazil}
         />
         <VideoCard 
          title="25 Best Countries to Visit in 2026"
