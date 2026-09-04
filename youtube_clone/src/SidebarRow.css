@@ -1,17 +1,15 @@
 .sidebarRow {
     display: flex;
     align-items: center;
-}
-
-.sidebarRow {
-    display: flex;
-    align-items: center;
     padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sidebarRow__icon {
     color: #606060;
-    font-size: large !important;
+    font-size: 22px !important;
+    flex-shrink: 0;
 }
 
 .sidebarRow__title {
@@ -19,10 +17,14 @@
     margin-left: 20px;
     font-size: 12px;
     font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .sidebarRow:hover {
-    background-color: lightgrey;
+    background-color: #f2f2f2;
     cursor: pointer;
 }
 
@@ -44,4 +46,47 @@
 
 .sidebarRow.selected > .sidebarRow__title {
     font-weight: bold;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .sidebarRow {
+        padding: 10px 12px;
+        justify-content: center;
+    }
+
+    .sidebarRow__icon {
+        font-size: 22px !important;
+    }
+
+    .sidebarRow__title {
+        margin-left: 10px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .sidebarRow {
+        padding: 10px;
+    }
+
+    .sidebarRow__icon {
+        font-size: 21px !important;
+    }
+
+    .sidebarRow__title {
+        font-size: 11px;
+        margin-left: 10px;
+    }
 }

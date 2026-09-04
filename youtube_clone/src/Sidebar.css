@@ -1,5 +1,8 @@
 .sidebar {
-    flex: 0.2;
+    flex: 0 0 220px;
+    width: 220px;
+    min-width: 220px;
+    background-color: white;
 }
 
 .sidebar > hr {
@@ -8,4 +11,30 @@
     background-color: lightgrey;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .sidebar {
+        flex: 0 0 170px;
+        width: 170px;
+        min-width: 170px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .sidebar {
+        display: none;
+    }
 }

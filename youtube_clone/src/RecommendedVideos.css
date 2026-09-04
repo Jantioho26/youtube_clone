@@ -1,8 +1,10 @@
 .recommendedVideos {
-    flex: 0.8;
+    flex: 1;
+    min-width: 0;
+
     background-color: #f9f9f9;
-    padding: 40px 20px;
-    padding-bottom: 0;
+
+    padding: 40px 20px 0;
 }
 
 .recommendedVideos > h2 {
@@ -11,8 +13,66 @@
 }
 
 .recommendedVideos__videos {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px 16px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   SMALL DESKTOP / TABLET
+========================= */
+
+@media screen and (max-width: 1200px) {
+
+    .recommendedVideos__videos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .recommendedVideos {
+        padding: 25px 15px 0;
+    }
+
+    .recommendedVideos__videos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 14px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .recommendedVideos {
+        width: 100%;
+        padding: 20px 12px 0;
+    }
+
+    .recommendedVideos > h2 {
+        margin-left: 0;
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+
+    .recommendedVideos__videos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
 }
 
 

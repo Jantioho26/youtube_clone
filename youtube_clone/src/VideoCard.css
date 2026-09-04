@@ -1,34 +1,118 @@
 .videoCard {
-    margin-bottom: 40px;
-    width: 270px;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 10px;
 }
 
 .videoCard__thumbnail {
-    height: 140px;
-    width: 250px;
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    border-radius: 10px;
 }
 
 .videoCard__info {
     display: flex;
+    align-items: flex-start;
+
     margin-top: 10px;
-    padding-right: 30px;
+    padding-right: 5px;
 }
 
 .videoCard__text {
-    margin-left: 15px;
+    flex: 1;
+    min-width: 0;
+
+    margin-left: 12px;
 }
 
 .videoCard__text > h4 {
     font-size: 14px;
+    line-height: 1.4;
+
     margin-bottom: 5px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .videoCard__text > p {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
     color: grey;
 }
 
 .video__avatar {
-    height: 30px !important;
-    width: 30px !important;
+    height: 32px !important;
+    width: 32px !important;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .videoCard__text > h4 {
+        font-size: 13px;
+    }
+
+    .videoCard__text > p {
+        font-size: 12px;
+    }
+
+    .video__avatar {
+        height: 30px !important;
+        width: 30px !important;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .videoCard {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .videoCard__thumbnail {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .videoCard__info {
+        margin-top: 10px;
+        padding-right: 0;
+    }
+
+    .videoCard__text {
+        margin-left: 10px;
+    }
+
+    .videoCard__text > h4 {
+        font-size: 14px;
+    }
+
+    .videoCard__text > p {
+        font-size: 12px;
+    }
+
+    .video__avatar {
+        height: 32px !important;
+        width: 32px !important;
+    }
 }
