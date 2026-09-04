@@ -15,19 +15,26 @@ function App() {
   return (
     <div className="app">
       <Router>
+
         <Header onMenuClick={toggleSidebar} />
 
         <Routes>
-          <Route
-            path="/"
-            element={<Home sidebarOpen={sidebarOpen} />}
-          />
+         <Route
+  path="/"
+  element={
+    <Home
+      sidebarOpen={sidebarOpen}
+      onCloseSidebar={toggleSidebar}
+    />
+  }
+/>
 
           <Route
             path="/search/:searchTerm"
-            element={<Search sidebarOpen={sidebarOpen} />}
+            element={<Search />}
           />
         </Routes>
+
       </Router>
     </div>
   );

@@ -17,10 +17,10 @@ function Header({ onMenuClick }) {
 
       <div className="header__left">
 
-        <MenuIcon
-          className="header__menuIcon"
-          onClick={onMenuClick}
-        />
+ <MenuIcon
+  className="header__menuIcon"
+  onClick={onMenuClick}
+/>
 
         <Link to="/">
           <img

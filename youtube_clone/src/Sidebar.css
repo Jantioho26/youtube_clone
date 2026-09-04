@@ -2,6 +2,7 @@
     flex: 0 0 220px;
     width: 220px;
     min-width: 220px;
+
     background-color: white;
 }
 
@@ -9,6 +10,7 @@
     height: 1px;
     border: 0;
     background-color: lightgrey;
+
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -29,12 +31,88 @@
 
 
 /* =========================
-   MOBILE
+   MOBILE DRAWER
 ========================= */
 
 @media screen and (max-width: 600px) {
 
+    .sidebarContainer {
+        position: fixed;
+
+        top: 56px;
+        left: 0;
+        bottom: 0;
+
+        width: 240px;
+
+        background-color: white;
+
+        z-index: 1000;
+
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+
+        overflow-y: auto;
+    }
+
     .sidebar {
-        display: none;
+        display: block;
+
+        width: 240px;
+        min-width: 240px;
+
+        background-color: white;
+    }
+}
+
+/* =========================
+   MOBILE BACKDROP
+========================= */
+
+.sidebarBackdrop {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .sidebarBackdrop {
+        display: block;
+
+        position: fixed;
+
+        top: 56px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(0, 0, 0, 0.4);
+
+        z-index: 999;
+    }
+
+    .sidebarContainer {
+        position: fixed;
+
+        top: 56px;
+        left: 0;
+        bottom: 0;
+
+        width: 240px;
+
+        background-color: white;
+
+        z-index: 1000;
+
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+
+        overflow-y: auto;
+    }
+
+    .sidebar {
+        display: block;
+
+        width: 240px;
+        min-width: 240px;
+
+        background-color: white;
     }
 }
