@@ -1,32 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./Header";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Search from "./Search";
-import Sidebar from "./Sidebar";
-import SearchPage from "./SearchPage";
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setSidebarOpen((prev) => !prev);
+  };
+
   return (
-      <div className="app">
+    <div className="app">
       <Router>
-          <Header />
-         
+        <Header onMenuClick={toggleSidebar} />
+
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/search/:searchTerm" element={<Search />}  />
-         </Routes>
+          <Route
+            path="/"
+            element={<Home sidebarOpen={sidebarOpen} />}
+          />
+
+          <Route
+            path="/search/:searchTerm"
+            element={<Search sidebarOpen={sidebarOpen} />}
+          />
+        </Routes>
       </Router>
-      <div className="app__page">
-      </div>
     </div>
-
-   
- 
-
-     
-  
   );
 }
 

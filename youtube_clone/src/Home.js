@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 import Sidebar from "./Sidebar";
 import RecommendedVideos from "./RecommendedVideos";
 
-const Home = () => {
+const Home = ({ sidebarOpen }) => {
   return (
     <div className="app__page">
-     <Sidebar />
-     <RecommendedVideos /> 
+      {sidebarOpen && <Sidebar />}
+      <RecommendedVideos />
     </div>
   );
 };
 
-export default Home
+export default Home;
 

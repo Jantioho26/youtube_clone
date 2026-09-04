@@ -1,3 +1,18 @@
+.header__left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header__menuIcon {
+    cursor: pointer;
+    color: #606060;
+}
+
+.header__menuIcon:hover {
+    color: #202020;
+}
+
 .header {
     display: flex;
     align-items: center;
